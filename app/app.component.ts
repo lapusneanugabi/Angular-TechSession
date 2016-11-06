@@ -7,7 +7,7 @@ import {AngularService} from './service';
   providers: [AngularService]
 })
 export class AppComponent { 
-  result: Number;
+  result: number;
   constructor(private angularService: AngularService) {
 
     this.result = angularService.Add(1, 2);
