@@ -14,7 +14,7 @@ var AppComponent = (function () {
     }
     AppComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
+            selector: '.my-app',
             template: "1+2 =  (( '{{1+ 2}}' )) | 1+2 = ((1+2))",
             interpolation: ['((', '))']
         }), 
