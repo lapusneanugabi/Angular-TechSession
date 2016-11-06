@@ -11,13 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var service_1 = require('./service');
 var AppComponent = (function () {
-    function AppComponent(anngularService) {
-        this.anngularService = anngularService;
+    function AppComponent(angularService) {
+        this.angularService = angularService;
+        this.result = angularService.Add(1, 2);
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: '.my-app',
-            template: "1+2 =  (( '{{1+ 2}}' )) | 1+2 = ((1+2))",
+            template: "1+2 =  (( '{{1+ 2}}' )) | 1+2 = ((result))",
             interpolation: ['((', '))'],
             providers: [service_1.AngularService]
         }), 
