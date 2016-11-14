@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
-import {AngularService} from './service';
+
+
 @Component({
   selector: '.my-app',
-  template: `1+2 =  (( '{{1+ 2}}' )) | 1+2 = ((result))`,
-  interpolation: ['((', '))'],
-  providers: [AngularService]
+  template: `<digital-clock></digital-clock>`,
+  providers: []
 })
 export class AppComponent { 
-  result: number;
-  constructor(private angularService: AngularService) {
 
-    this.result = angularService.Add(1, 2);
+  constructor() {
   }
 }
 

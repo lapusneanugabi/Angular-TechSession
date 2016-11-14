@@ -9,20 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var service_1 = require('./service');
 var AppComponent = (function () {
-    function AppComponent(angularService) {
-        this.angularService = angularService;
-        this.result = angularService.Add(1, 2);
+    function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: '.my-app',
-            template: "1+2 =  (( '{{1+ 2}}' )) | 1+2 = ((result))",
-            interpolation: ['((', '))'],
-            providers: [service_1.AngularService]
+            template: "<digital-clock></digital-clock>",
+            providers: []
         }), 
-        __metadata('design:paramtypes', [service_1.AngularService])
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
