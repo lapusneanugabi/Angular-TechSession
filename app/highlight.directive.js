@@ -9,22 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var digital_clock_component_1 = require('./digital-clock.component');
-var highlight_directive_1 = require('./highlight.directive');
-var AppModule = (function () {
-    function AppModule() {
+var HighlightDirective = (function () {
+    function HighlightDirective(el, renderer) {
+        debugger;
+        renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, digital_clock_component_1.DigitalClockComponent, highlight_directive_1.HighlightDirective],
-            bootstrap: [app_component_1.AppComponent]
+    HighlightDirective = __decorate([
+        core_1.Directive({
+            selector: '[highlight]'
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+        __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
+    ], HighlightDirective);
+    return HighlightDirective;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.HighlightDirective = HighlightDirective;
+//# sourceMappingURL=highlight.directive.js.map

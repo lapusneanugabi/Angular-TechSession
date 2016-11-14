@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 
-
 @Component({
   selector: '.my-app',
-  template: `<digital-clock></digital-clock>`,
+  template: `<digital-clock highlight></digital-clock>`,
   providers: []
 })
 export class AppComponent { 
