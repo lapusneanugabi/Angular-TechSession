@@ -18,7 +18,6 @@ var dateHandPipe = (function () {
     }
     dateHandPipe.prototype.transform = function (date, component) {
         var result = 0;
-        return 0;
         if (date) {
             switch (component) {
                 case 'H':

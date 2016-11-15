@@ -8,7 +8,6 @@ export class dateHandPipe implements PipeTransform {
   transform(date: any, component: string): any {
       
       let result = 0;
-      return 0;
       if (date) {
 
         switch(component) {
