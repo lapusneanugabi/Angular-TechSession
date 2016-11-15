@@ -9,18 +9,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+/*
+ * Usage:
+ *   value | hour:component
+*/
+var HourPipe = (function () {
+    function HourPipe() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: '.my-app',
-            template: " 1. <digital-clock highlight></digital-clock> \n              <br> \n              2. <digital-clock></digital-clock>\n              <br>\n              3. <analog-clock></analog-clock>",
-            providers: []
-        }), 
+    HourPipe.prototype.transform = function (date, component) {
+        var result = 0;
+        if (date) {
+            switch (component) {
+                case 'H':
+                    result = 30 * (date.getHours() % 12) + date.getMinutes() / 2;
+                    break;
+                case 'm':
+                    result = date.getMinutes();
+                    break;
+                case 's':
+                    result = date.getSeconds();
+                    break;
+            }
+        }
+        return result;
+    };
+    HourPipe = __decorate([
+        core_1.Pipe({ name: 'hour' }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HourPipe);
+    return HourPipe;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HourPipe = HourPipe;
+//# sourceMappingURL=hour.pipe.js.map

@@ -9,18 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var RotateDirective = (function () {
+    function RotateDirective(el, renderer) {
+        this.el = el;
+        this.renderer = renderer;
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: '.my-app',
-            template: " 1. <digital-clock highlight></digital-clock> \n              <br> \n              2. <digital-clock></digital-clock>\n              <br>\n              3. <analog-clock></analog-clock>",
-            providers: []
+    RotateDirective.prototype.ngOnInit = function () {
+        alert('deg: ' + this.deg);
+        debugger;
+        this.renderer.setElementStyle(this.el.nativeElement, 'transform', 'rotate(' + this.deg + ' 50 50)');
+    };
+    __decorate([
+        core_1.Input('rotate'), 
+        __metadata('design:type', String)
+    ], RotateDirective.prototype, "deg", void 0);
+    RotateDirective = __decorate([
+        core_1.Directive({
+            selector: '[rotate]'
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
+    ], RotateDirective);
+    return RotateDirective;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.RotateDirective = RotateDirective;
+//# sourceMappingURL=rotate.directive.js.map

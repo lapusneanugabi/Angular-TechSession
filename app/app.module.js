@@ -12,14 +12,19 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var digital_clock_component_1 = require('./digital-clock.component');
+var analog_clock_component_1 = require('./analog-clock.component');
 var highlight_directive_1 = require('./highlight.directive');
+var date_hand_pipe_1 = require('./date-hand.pipe');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, digital_clock_component_1.DigitalClockComponent, highlight_directive_1.HighlightDirective],
+            declarations: [app_component_1.AppComponent,
+                digital_clock_component_1.DigitalClockComponent, analog_clock_component_1.AnalogClockComponent,
+                highlight_directive_1.HighlightDirective,
+                date_hand_pipe_1.dateHandPipe],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
