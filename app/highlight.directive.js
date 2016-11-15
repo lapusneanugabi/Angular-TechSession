@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var HighlightDirective = (function () {
     function HighlightDirective(el, renderer) {
-        debugger;
         renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
     }
     HighlightDirective = __decorate([

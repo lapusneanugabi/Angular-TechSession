@@ -15,7 +15,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: '.my-app',
-            template: " 1. <digital-clock highlight></digital-clock> \n              <br> \n              2. <digital-clock></digital-clock>\n              <br>\n              3. <analog-clock></analog-clock>",
+            template: " 1. <digital-clock></digital-clock>\n              <br>\n              2. <digital-clock highlight></digital-clock>\n              <analog-clock></analog-clock>",
             providers: []
         }), 
         __metadata('design:paramtypes', [])
