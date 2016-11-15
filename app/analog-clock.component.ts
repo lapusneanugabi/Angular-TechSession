@@ -82,7 +82,7 @@ import {Observable} from 'rxjs/Rx';
                     <g id="hands">
                         <line [attr.transform] = "'rotate(' + (clock | async | dateHand:'H') + ' 50 50)'" id="min" x1="50" y1="50.5" x2="50" y2="34" style="stroke:rgb(0, 0, 0);stroke-width:1.5"/>
                         <line [attr.transform] = "'rotate(' + (clock | async | dateHand:'m') + ' 50 50)'" id="min" x1="50" y1="50" x2="50" y2="24" style="stroke:rgb(0, 0, 0);stroke-width:1"/>
-                        <line [attr.transform] = "'rotate(' + (clock | async | dateHand:'s') + ' 50 50)'" id="sec" x1="50" y1="50" x2="50" y2="20" style="stroke:rgb(0, 0, 0);stroke-width:0.5"/>
+                        <line [attr.transform] = "'rotate(' + (clock | async | dateHand:'s') + ' 50 50)'" id="sec" x1="50" y1="50" x2="50" y2="25" style="stroke:rgb(0, 0, 0);stroke-width:0.5"/>
                     </g>
 
                 </svg>
