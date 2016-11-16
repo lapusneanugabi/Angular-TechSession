@@ -5,3 +5,5 @@ Installation steps:
 - cd Angular-TechSession
 - npm install
 - npm start
+
+![alt tag](https://github.com/lapusneanugabi/Angular-TechSession/blob/master/clock.png)
