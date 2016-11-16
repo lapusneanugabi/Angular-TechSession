@@ -85,6 +85,11 @@ import {Observable} from 'rxjs/Rx';
                         <line [attr.transform] = "'rotate(' + (clock | async | dateHand:'s') + ' 50 50)'" id="sec" x1="50" y1="50" x2="50" y2="25" style="stroke:rgb(0, 0, 0);stroke-width:0.5"/>
                     </g>
 
+                    <line x1="50" y1="8" x2="50" y2="16" style="stroke:rgb(0, 0, 0);stroke-width:1" />
+                    <line x1="83" y1="50" x2="75" y2="50" style="stroke:rgb(0, 0, 0);stroke-width:1" />
+                    <line x1="50" y1="92" x2="50" y2="84" style="stroke:rgb(0, 0, 0);stroke-width:1" />
+                    <line x1="17" y1="50" x2="25" y2="50" style="stroke:rgb(0, 0, 0);stroke-width:1" />
+
                 </svg>
             </div>
                 `,
